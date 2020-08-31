@@ -1,9 +1,9 @@
-const http = require("http");
-const url = require("url");
+const http = require("http"); //tehdään olio joka käyttää http protokollaa
+const url = require("url"); //muuttuja joka lukee selaimen urlin
 
-const portti = 3001;
+const portti = 3001; //portti jota käytetään
 
-const serveri = http.createServer((req, res) => {
+const serveri = http.createServer((req, res) => { //luo serverin
 
     if (req.url != "/favicon.ico") {
 
@@ -20,6 +20,6 @@ const serveri = http.createServer((req, res) => {
 
 });
 
-serveri.listen(portti, () => {
+serveri.listen(portti, () => { //palvelimen käynnistyessä tulostus konsoliin
     console.log(`Palvelin käynnistyi porttiin ${portti}`);   
 });
